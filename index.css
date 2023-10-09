@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+:root {
+    --background-primary: #f7e9dc;
+    --text-focused: #fff;
+    --text-primary: #000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--text-primary);
+}
+
+
+body {
+    background-color: var(--background-primary);
+}
+
+.main_container {
+    position: relative;
+    height: 500vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0% 2%;
+}
+
+.home_content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100%;
+}
+
+.left {
+    position: relative;
+    height: 100vh;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.right {
+    position: relative;
+    height: 100vh;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.right-main-container {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: right;
+    gap: 50px;
+    height: 70vh;
+}
+
+.left-main-container{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: end;
+    height: 75vh;
+}
+.heading{
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 5rem;
+    font-weight: 700;
+}
+.sub_heading{
+    font-family: 'Lora', serif;
+    font-weight: 300;
+    margin-top: 2%;
+    font-size: 3rem;
+}
+.right img {
+    border-radius: 12px;
+    width: 50%;
+    object-fit: fill;
+}
+
+.links_container {
+    z-index: 100;
+    list-style-type: none;
+    margin-bottom: 2%;
+}
+
+.link {
+    border: 1px dashed black;
+    border-radius: 100%;
+    width: 2rem;
+    height: 2rem;
+    margin: 0.5rem 0px;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.link a {
+    font-weight: 100;
+    font-size: 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.link a span {
+    transition: color 0.2s ease-in-out;
+}
+
+.link.focused {
+    background-color: var(--text-primary);
+}
+
+.link.focused a span {
+    color: var(--text-focused);
+}
+
+.scroll_container{
+    position: relative;
+    margin-top: -2%;
+    height: 400vh;
+    width: 100%;
+}
+
+.scroll_element{
+    width: 100%;
+    height: 100vh;
+    border-radius:48px;
+}
+.scroll_element .right-main-container{
+    padding:0% 5%;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+    width: 100%;
+    justify-content:center;
+}
+.scroll_element .heading{
+    font-size: 3rem;
+}
+.scroll_element .sub_heading{
+    margin:0%;
+    font-size: 2.5rem;
+}
+.scroll_element_inner_container{
+    display: flex;
+
+}
+.left img{
+    /* aspect-ratio: 1/1; */
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#scroll_element_one{
+    background-color: rgba(255, 192, 149,1);
+    z-index: 2;
+    overflow:hidden;
+}
+#scroll_element_two{
+    background-color: rgba(173, 247, 182,1);
+    z-index: 3;
+    overflow:hidden;
+}
+#scroll_element_three{
+    /* background-color: rgba(121, 173, 220,1); */
+    background-color: rgba(188, 231, 231, 1);
+    z-index: 4;
+    overflow:hidden;
+}
+#scroll_element_four{
+    background-color: rgba(255, 238, 147,1);
+    position: relative;
+    z-index: 5;
+    overflow:hidden;
+}
